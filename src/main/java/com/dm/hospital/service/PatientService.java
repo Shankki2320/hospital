@@ -7,6 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 public interface PatientService {
 
-    BaseResponse<Patient> fetchPatient(int id);
+    BaseResponse<Patient> fetchPatient(int patientId);
 
 }

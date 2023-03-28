@@ -26,12 +26,13 @@ public class PatientServiceImplTest {
     @Mock
     private PatientRepository patientRepository;
 
-    PatientEntity patient;
+
+    PatientEntity patient=null;
 
     @BeforeEach
     public void setup() {
-        patient.setFName("Shankar");
-        patient.setLName("Katkade");
+        patient.setfName("Shankar");
+        patient.setlName("Katkade");
         patient.setId(1);
 
     }
@@ -44,8 +45,8 @@ public class PatientServiceImplTest {
         Assertions.assertNotNull(response);
         Assertions.assertNotEquals("", response.getErrorCode());
         Assertions.assertEquals(patient.getId(), response.getData().getId());
-        Assertions.assertEquals(patient.getFName(), response.getData().getFirstName());
-        Assertions.assertEquals(patient.getLName(), response.getData().getLastName());
+        Assertions.assertEquals(patient.getfName(), response.getData().getFirstName());
+        Assertions.assertEquals(patient.getlName(), response.getData().getLastName());
     }
 
 
